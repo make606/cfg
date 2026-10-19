@@ -1,9 +1,9 @@
 name: VPN Gate Node Check
 
 on:
-  # 定时检测: 默认每 30 分钟一次。改成每 60 分钟: cron: "0 * * * *"
+  # 定时检测: 每 2 小时一次 (2026-10-19 起: 原每 30 分钟一次, 因 Cloudflare Workers CPU 超限降频)
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "0 */2 * * *"
   workflow_dispatch:
 
 permissions:
